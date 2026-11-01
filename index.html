@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mohammad Zubair Mir | Baramulla Public Profiles</title>
+<meta name="description" content="An independent public record of Mohammad Zubair Mir's education, political activity, community outreach, sports and civic engagement in Baramulla.">
+<meta name="theme-color" content="#14263a">
+<style>
+:root{--navy:#14263a;--blue:#285477;--gold:#c9a96e;--ink:#202d39;--muted:#647384;--paper:#f3f6f9;--line:#e1e7ed}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{background:linear-gradient(130deg,#14263a,#285477);color:#fff}.wrap{max-width:1120px;margin:auto;padding:0 24px}
+nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.brand{font-weight:800;letter-spacing:.8px;font-size:.9rem}nav a{color:#e8eff5;text-decoration:none;margin-left:14px;font-size:.88rem}
+.hero{padding:64px 0 72px;display:grid;grid-template-columns:1.5fr .7fr;gap:36px;align-items:center}.eyebrow{color:#e4c891;text-transform:uppercase;letter-spacing:2px;font-size:.76rem;font-weight:750}
+h1{font-size:clamp(2.6rem,6vw,4.5rem);line-height:1.03;letter-spacing:-1.8px;margin:14px 0}.hero p{font-size:1.1rem;color:#e2eaf1;max-width:700px}
+.photo{min-height:250px;border:1px solid #8196a9;border-radius:18px;background:#ffffff0d;display:grid;place-items:center;text-align:center;padding:22px;color:#e4edf4;overflow:hidden}.photo img{width:100%;height:100%;max-height:300px;object-fit:cover;border-radius:12px}
+.pills span{display:inline-block;border:1px solid #8ca0b1;border-radius:30px;padding:5px 11px;margin:5px 5px 0 0;font-size:.82rem}
+main{max-width:1120px;margin:auto;padding:26px 24px 60px}.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:28px;margin:18px 0;box-shadow:0 7px 22px #14263a08}
+h2{color:var(--navy);font-size:1.55rem;line-height:1.25;margin:0 0 13px}h3{color:var(--blue);font-size:1.05rem;margin:0 0 5px}.muted,.small{color:var(--muted);font-size:.91rem}.note{background:#fbfaf6;border-left:3px solid var(--gold);padding:12px 15px;color:#5d6873;font-size:.91rem;margin:14px 0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.fact{background:#f4f7fa;border-radius:11px;padding:14px}.fact b{display:block;color:var(--navy);font-size:.83rem;text-transform:uppercase;letter-spacing:.5px}
+.timeline{border-left:2px solid #d7e0e8;margin:18px 0 0 7px;padding-left:22px}.event{position:relative;margin:0 0 24px}.event:before{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--gold);left:-28px;top:8px}.date{font-size:.82rem;color:#718092;font-weight:750}.event h3{margin:2px 0 4px}.meta{font-size:.83rem;color:#718092;margin:3px 0 7px}.status{display:inline-block;border-radius:30px;background:#eef2f5;padding:3px 9px;font-size:.76rem;color:#465666;margin:3px 0}.event a,.sources a{overflow-wrap:anywhere}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}.filters button{border:1px solid #cbd5df;background:#fff;padding:7px 12px;border-radius:30px;cursor:pointer;color:#263849}.filters button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+footer{text-align:center;padding:26px 16px;color:#748291;font-size:.88rem}
+@media(max-width:720px){.hero{grid-template-columns:1fr;padding:44px 0 48px}.photo{min-height:150px} .grid{grid-template-columns:1fr}nav{padding:14px 0}nav a{margin:0 10px 0 0}.card{padding:21px}}
+</style></head>
+<body>
+<header><div class="wrap">
+<nav><div class="brand" id="brand">BARAMULLA PUBLIC PROFILES</div><div><a href="#background">Background</a><a href="#activity">Activity record</a><a href="#sources">Sources</a><a href="#method">Methodology</a></div></nav>
+<div class="hero"><div><div class="eyebrow">Independent public-information archive</div><h1 id="name">Mohammad Zubair Mir</h1><p id="intro"></p><div class="pills"><span>Political activity</span><span>Community outreach</span><span>Youth and sport</span><span>Public engagement</span></div></div>
+<div class="photo" id="portrait"><div><strong>Portrait not yet added</strong><br><small>Add an authorised image URL in data/profile.json.</small></div></div></div>
+</div></header>
+<main>
+<div class="note" id="identity"></div>
+<section class="card" id="background"><h2>Background and public profile</h2><div class="grid" id="facts"></div><div id="sections"></div></section>
+<section class="card" id="activity"><h2>Public activity record</h2><p class="muted">Entries are arranged by date. Each item identifies its locality, activity type, evidence and verification status. Entries marked as needing a source are leads for documentation, not independently verified findings.</p><div class="filters" id="filters"></div><div class="timeline" id="timeline"></div></section>
+<section class="card" id="sources"><h2>Source register</h2><p class="muted">Links are provided so readers can inspect the underlying material rather than rely solely on this summary.</p><ul class="sources" id="sourceList"></ul></section>
+<section class="card" id="method"><h2>Editorial method and limitations</h2><ul id="policy"></ul><p class="small" id="review"></p></section>
+</main>
+<footer>Baramulla Public Profiles · Independent public-information archive · Not an official website</footer>
+<script>
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+async function init(){
+ const r=await fetch(new URL("data/profile.json", window.location.href)); const d=await r.json();
+ document.title=`${d.subject.name} | ${d.site}`; document.getElementById("brand").textContent=d.site.toUpperCase();
+ document.getElementById("name").textContent=d.subject.name;document.getElementById("intro").textContent=d.intro;
+ document.getElementById("identity").textContent=d.site_identity;
+ if(d.subject.portrait){document.getElementById("portrait").innerHTML=`<img src="${esc(d.subject.portrait)}" alt="Portrait of ${esc(d.subject.name)}">`;}
+ const facts=[["Location",d.subject.location],["Education",d.subject.education],["Political association",d.subject.political_association],["Reported role",d.subject.reported_role]];
+ document.getElementById("facts").innerHTML=facts.map(([k,v])=>`<div class="fact"><b>${esc(k)}</b>${esc(v)}</div>`).join("")+
+ `<div class="fact"><b>Public profiles</b><a href="${esc(d.subject.social_profile)}" target="_blank" rel="noopener">X profile @iamzubairmir</a>${d.subject.facebook_profile?` · <a href="${esc(d.subject.facebook_profile)}" target="_blank" rel="noopener">Facebook profile</a>`:""}</div>`;
+ document.getElementById("sections").innerHTML=d.sections.map(s=>`<div style="margin-top:24px"><h3>${esc(s.title)}</h3>${s.paragraphs.map(p=>`<p>${esc(p)}</p>`).join("")}</div>`).join("");
+ const cats=["All activities",...new Set(d.activities.map(a=>a.category))];let selected="All activities";
+ const filters=document.getElementById("filters"), timeline=document.getElementById("timeline");
+ function draw(){filters.innerHTML=cats.map(c=>`<button class="${c===selected?"active":""}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
+ timeline.innerHTML=d.activities.filter(a=>selected==="All activities"||a.category===selected).map(a=>`<article class="event"><div class="date">${esc(a.date)}</div><h3>${esc(a.title)}</h3><div class="meta">${esc(a.location)} · ${esc(a.category)}</div><p>${esc(a.description)}</p><span class="status">${esc(a.status)}</span><div class="small">Evidence: ${esc(a.evidence)}</div>${a.source?`<div><a href="${esc(a.source)}" target="_blank" rel="noopener">View source ↗</a></div>`:""}</article>`).join("")||"<p>No entries in this category.</p>";
+ filters.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{selected=b.dataset.cat;draw()}));}
+ draw();
+ document.getElementById("sourceList").innerHTML=d.source_links.filter(s=>s.url).map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a></li>`).join("");
+ document.getElementById("policy").innerHTML=d.editorial_policy.map(p=>`<li>${esc(p)}</li>`).join("");
+ document.getElementById("review").textContent=`Last reviewed: ${d.last_reviewed}`;
+}
+init().catch(e=>{document.querySelector("main").innerHTML="<section class='card'><h2>Profile data could not be loaded</h2><p>Check that the repository contains <code>index.html</code> and a folder named <code>data</code> at the same top level, with <code>profile.json</code> inside it. The site must be opened through the GitHub Pages URL, not by previewing index.html as a local file.</p><p>After uploading, wait for GitHub Pages to finish deploying, then refresh the page.</p></section>";});
+</script></body></html>
